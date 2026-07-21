@@ -1,0 +1,9 @@
+[build]
+  base    = "wedding-invitation"
+  command = "npm run build"
+  publish = "wedding-invitation/dist"
+
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 200

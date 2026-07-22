@@ -2,144 +2,49 @@ import React from 'react';
 import useInView from '../hooks/useInView';
 
 const events = [
-  {
-    time: '11:00 AM',
-    title: 'Reception',
-    tamilTitle: 'வரவேற்பு',
-    desc: 'Welcome guests and begin the sacred celebrations',
-    icon: '🌸',
-  },
-  {
-    time: '12:00 PM',
-    title: 'Lunch',
-    tamilTitle: 'பந்தி சாப்பாடு',
-    desc: 'A traditional feast with family and friends',
-    icon: '🍽️',
-  },
-  {
-    time: '01:00 PM',
-    title: 'Blessings',
-    tamilTitle: 'ஆசீர்வாதம்',
-    desc: 'Sacred ceremonies and heartfelt blessings',
-    icon: '🙏',
-  },
-  {
-    time: '02:00 PM',
-    title: 'Family Photos',
-    tamilTitle: 'குடும்ப புகைப்படம்',
-    desc: 'Capture memories with your loved ones',
-    icon: '📷',
-  },
+  { time:'11:00 AM', title:'Reception',     desc:'Welcome guests and begin the celebrations.',        icon:'🌸' },
+  { time:'12:00 PM', title:'Lunch',         desc:'A traditional feast with family and friends.',      icon:'🍽️' },
+  { time:'01:00 PM', title:'Blessings',     desc:'Sacred ceremonies and heartfelt blessings.',        icon:'🙏' },
+  { time:'02:00 PM', title:'Family Photos', desc:'Capture precious memories with your loved ones.',   icon:'📷' },
 ];
 
-function EventCard({ event, index, inView }) {
+function Card({ event, index, inView }) {
   return (
-    <div
-      className={`relative flex gap-4 transition-all duration-700 ${
-        inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
-      }`}
-      style={{ transitionDelay: `${index * 0.15}s` }}
-    >
-      {/* Timeline connector */}
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flexShrink: 0 }}>
-        <div
-          style={{
-            width: '52px',
-            height: '52px',
-            borderRadius: '50%',
-            background: 'linear-gradient(135deg, #8B1A1A, #C8922A)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            fontSize: '1.4rem',
-            boxShadow: '0 4px 16px rgba(0,0,0,0.4), 0 0 0 3px rgba(200,146,42,0.2)',
-            flexShrink: 0,
-            border: '1px solid rgba(200,146,42,0.5)',
-          }}
-        >
-          {event.icon}
-        </div>
+    <div style={{
+      display:'flex',gap:'1rem',
+      opacity:inView?1:0,
+      transform:inView?'translateX(0)':'translateX(-30px)',
+      transition:`all 0.9s cubic-bezier(0.16,1,0.3,1) ${index*0.12}s`,
+    }}>
+      {/* Timeline col */}
+      <div style={{display:'flex',flexDirection:'column',alignItems:'center',flexShrink:0}}>
+        <div style={{
+          width:52,height:52,borderRadius:'50%',
+          background:'linear-gradient(135deg,#B8860B,#D4AF37)',
+          display:'flex',alignItems:'center',justifyContent:'center',
+          fontSize:'1.3rem',flexShrink:0,
+          boxShadow:'0 4px 16px rgba(184,134,11,0.3), 0 0 0 3px rgba(212,175,55,0.15)',
+        }}>{event.icon}</div>
         {index < events.length - 1 && (
-          <div
-            style={{
-              width: '2px',
-              flex: 1,
-              minHeight: '40px',
-              background: 'linear-gradient(180deg, #C8922A, rgba(200,146,42,0.05))',
-              margin: '6px 0',
-            }}
-          />
+          <div style={{width:1,flex:1,minHeight:40,background:'linear-gradient(180deg,#D4AF37,rgba(212,175,55,0.1))',margin:'6px 0'}}/>
         )}
       </div>
 
-      {/* Content */}
-      <div
-        className="flex-1 mb-2 rounded-2xl p-5"
-        style={{
-          background: 'linear-gradient(135deg, rgba(60,10,10,0.9), rgba(30,5,5,0.95))',
-          border: '1px solid rgba(200,146,42,0.35)',
-          backdropFilter: 'blur(12px)',
-          boxShadow: '0 4px 20px rgba(0,0,0,0.3)',
-        }}
-      >
-        {/* Top accent line */}
-        <div style={{
-          height: '1px',
-          background: 'linear-gradient(90deg, #C8922A, transparent)',
-          marginBottom: '10px',
-        }} />
-
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '6px' }}>
-          <div>
-            <h3
-              style={{
-                fontFamily: '"Cormorant Garamond", serif',
-                fontSize: '1.3rem',
-                fontWeight: 600,
-                color: '#FFD700',
-              }}
-            >
-              {event.title}
-            </h3>
-            <p
-              style={{
-                fontFamily: '"Noto Serif", serif',
-                fontSize: '0.65rem',
-                color: 'rgba(200,146,42,0.6)',
-                marginTop: '2px',
-              }}
-            >
-              {event.tamilTitle}
-            </p>
-          </div>
-          <span
-            style={{
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '0.72rem',
-              fontWeight: 600,
-              color: '#C8922A',
-              letterSpacing: '0.04em',
-              background: 'rgba(200,146,42,0.12)',
-              padding: '4px 12px',
-              borderRadius: '20px',
-              border: '1px solid rgba(200,146,42,0.35)',
-              flexShrink: 0,
-              marginLeft: '8px',
-            }}
-          >
-            {event.time}
-          </span>
+      {/* Content card */}
+      <div style={{
+        flex:1,marginBottom:8,borderRadius:16,padding:'1.2rem 1.4rem',
+        background:'#fff',border:'1px solid rgba(212,175,55,0.25)',
+        boxShadow:'0 4px 20px rgba(184,134,11,0.06)',
+      }}>
+        <div style={{display:'flex',justifyContent:'space-between',alignItems:'flex-start',marginBottom:6}}>
+          <h3 style={{fontFamily:'"Cormorant Garamond",serif',fontSize:'1.3rem',fontWeight:600,color:'#1C1008'}}>{event.title}</h3>
+          <span style={{
+            fontFamily:'Poppins',fontSize:'0.7rem',fontWeight:600,color:'#B8860B',
+            background:'rgba(212,175,55,0.1)',padding:'4px 12px',borderRadius:20,
+            border:'1px solid rgba(212,175,55,0.3)',flexShrink:0,marginLeft:8,
+          }}>{event.time}</span>
         </div>
-        <p
-          style={{
-            fontFamily: 'Poppins, sans-serif',
-            fontSize: '0.8rem',
-            color: '#EDD6A0',
-            lineHeight: 1.7,
-          }}
-        >
-          {event.desc}
-        </p>
+        <p style={{fontFamily:'Poppins',fontSize:'0.82rem',color:'#5C3D1E',lineHeight:1.7}}>{event.desc}</p>
       </div>
     </div>
   );
@@ -147,65 +52,23 @@ function EventCard({ event, index, inView }) {
 
 export default function EventDetailsSection() {
   const { ref, inView } = useInView(0.15);
-
   return (
-    <section
-      id="events"
-      ref={ref}
-      className="relative py-24 px-6 overflow-hidden"
-      style={{
-        background: 'linear-gradient(180deg, #2E0606 0%, #1A0404 100%)',
-      }}
-    >
-      {/* Background decoration */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 flex items-center justify-center opacity-[0.03] select-none pointer-events-none"
-        style={{ fontSize: '16rem', lineHeight: 1 }}
-      >
-        🪷
-      </div>
+    <section id="events" ref={ref} className="relative py-32 px-6 overflow-hidden"
+      style={{background:'linear-gradient(180deg,#F5EDD8 0%,#FAF6EF 100%)'}}>
 
-      <div className="max-w-lg mx-auto relative z-10">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <p
-            className={`transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
-            style={{
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '0.72rem',
-              letterSpacing: '0.32em',
-              textTransform: 'uppercase',
-              color: '#C8922A',
-              marginBottom: '0.75rem',
-            }}
-          >
-            ✦ நிகழ்ச்சி விவரங்கள் · Event Details ✦
-          </p>
-          <h2
-            className={`gold-shimmer transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
-            style={{
-              fontFamily: '"Cormorant Garamond", serif',
-              fontSize: 'clamp(1.8rem, 6vw, 2.8rem)',
-              fontWeight: 600,
-              transitionDelay: '0.15s',
-            }}
-          >
+      <div className="max-w-lg mx-auto">
+        <div style={{textAlign:'center',marginBottom:'3rem',
+          opacity:inView?1:0,transform:inView?'translateY(0)':'translateY(30px)',
+          transition:'all 0.9s ease 0s'}}>
+          <span className="section-label">✦ &nbsp; Event Schedule &nbsp; ✦</span>
+          <div className="gold-line" style={{maxWidth:140,margin:'1rem auto 0.75rem'}}/>
+          <h2 style={{fontFamily:'"Cormorant Garamond",serif',fontSize:'clamp(2rem,6vw,3rem)',color:'#1C1008',fontWeight:400}}>
             Day Schedule
           </h2>
-          {/* Diya decorative row */}
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '6px', marginTop: '0.75rem' }}>
-            {['🪔', '🌸', '🪷', '🌸', '🪔'].map((e, i) => (
-              <span key={i} style={{ fontSize: '1rem', opacity: 0.6, animation: `float ${3 + i * 0.3}s ease-in-out infinite ${i * 0.2}s` }}>{e}</span>
-            ))}
-          </div>
         </div>
 
-        {/* Event cards */}
-        <div>
-          {events.map((event, i) => (
-            <EventCard key={event.title} event={event} index={i} inView={inView} />
-          ))}
+        <div style={{display:'flex',flexDirection:'column',gap:0}}>
+          {events.map((e,i) => <Card key={e.title} event={e} index={i} inView={inView}/>)}
         </div>
       </div>
     </section>

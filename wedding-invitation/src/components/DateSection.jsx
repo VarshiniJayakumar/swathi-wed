@@ -117,7 +117,7 @@ export default function DateSection() {
           }}>
             <p style={{fontFamily:'"Cormorant Garamond",serif',fontSize:'1rem',
               color:'#B8860B',fontStyle:'italic',letterSpacing:'0.05em'}}>
-              🕐 Muhurtham: 11:00 AM
+              🕐 Reception: 11:00 AM
             </p>
           </div>
         </div>

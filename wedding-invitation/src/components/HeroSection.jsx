@@ -11,7 +11,7 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex flex-col items-center justify-center"
       style={{ background: 'linear-gradient(135deg, #0A0804 0%, #1C1008 40%, #2E1A0A 70%, #0A0804 100%)' }}
     >
       {/* Cinematic grain overlay */}
@@ -75,12 +75,14 @@ export default function HeroSection() {
           transform: loaded ? 'translateX(0)' : 'translateX(-50px)',
           transition: 'all 1.1s cubic-bezier(0.16,1,0.3,1) 0.35s',
           marginTop: '1.5rem',
+          padding: '0 1rem',
         }}>
           <h1 className="gold-shimmer" style={{
             fontFamily: '"Great Vibes", cursive',
-            fontSize: 'clamp(2.4rem, 8vw, 7rem)',
-            lineHeight: 1.1,
-            whiteSpace: 'nowrap',
+            fontSize: 'clamp(2rem, 7vw, 6rem)',
+            lineHeight: 1.2,
+            wordBreak: 'keep-all',
+            overflowWrap: 'normal',
           }}>
             S. Nandhakumar
           </h1>
@@ -103,12 +105,14 @@ export default function HeroSection() {
           opacity: loaded ? 1 : 0,
           transform: loaded ? 'translateX(0)' : 'translateX(50px)',
           transition: 'all 1.1s cubic-bezier(0.16,1,0.3,1) 0.85s',
+          padding: '0 1rem',
         }}>
           <h1 className="gold-shimmer" style={{
             fontFamily: '"Great Vibes", cursive',
-            fontSize: 'clamp(2.4rem, 8vw, 7rem)',
-            lineHeight: 1.1,
-            whiteSpace: 'nowrap',
+            fontSize: 'clamp(2rem, 7vw, 6rem)',
+            lineHeight: 1.2,
+            wordBreak: 'keep-all',
+            overflowWrap: 'normal',
           }}>
             K. Swathilakshmi
           </h1>

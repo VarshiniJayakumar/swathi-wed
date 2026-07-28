@@ -2,10 +2,10 @@ import React from 'react';
 import useInView from '../hooks/useInView';
 
 const milestones = [
-  { icon:'👀', year:'2022', title:'First Meeting',  desc:'Two hearts crossed paths and a beautiful story began.' },
-  { icon:'🤝', year:'2023', title:'Friendship',     desc:'Laughter, trust and countless memories shared together.' },
-  { icon:'❤️', year:'2025', title:'Families United',desc:'Two families came together, blessings were given.' },
-  { icon:'💍', year:'2026', title:'Wedding Day',    desc:'Forever begins on 30 August 2026.' },
+  { icon:'👀', year:'24.12.2025', title:'First Meeting',   desc:'Two hearts crossed paths and a beautiful story began.' },
+  { icon:'🤝', year:'26.01.2026', title:'Friendship',      desc:'Laughter, trust and countless memories shared together.' },
+  { icon:'❤️', year:'04.06.2026', title:'Families United', desc:'Two families came together, blessings were given.' },
+  { icon:'💍', year:'30.08.2026', title:'Wedding Day',     desc:'Forever begins on 30 August 2026.' },
 ];
 
 function Card({ item, index }) {

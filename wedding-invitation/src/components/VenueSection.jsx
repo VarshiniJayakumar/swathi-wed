@@ -66,7 +66,7 @@ export default function VenueSection() {
           }}>🏛️</div>
 
           <h3 style={{ fontFamily:'"Cormorant Garamond",serif', fontSize:'2rem', color:'#1C1008', fontWeight:600, marginBottom:6 }}>
-            Thelungupalayam
+            Arjun Mahal, Thelungupalayam
           </h3>
           <p style={{ fontFamily:'Poppins', fontSize:'0.9rem', color:'#5C3D1E', lineHeight:1.8 }}>
             Vaithiyasalai Near, Coimbatore

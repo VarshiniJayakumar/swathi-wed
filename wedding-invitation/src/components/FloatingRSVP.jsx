@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const WHATSAPP_NUMBER = '919999999999';
 const WHATSAPP_MSG    = encodeURIComponent("Hi! I'll be attending the wedding of S. Nandhakumar & K. Swathilakshmi on 30 August 2026 🎉");
-const MAPS_URL        = 'https://www.google.com/maps/search/Thelungupalayam+Vaithiyasalai+Coimbatore';
+const MAPS_URL        = 'https://maps.app.goo.gl/tzxUrx5eHC3LHnWc7';
 
 export default function FloatingRSVP() {
   const [open, setOpen] = useState(false);

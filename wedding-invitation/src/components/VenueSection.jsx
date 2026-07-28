@@ -3,7 +3,7 @@ import useInView from '../hooks/useInView';
 
 export default function VenueSection() {
   const { ref, inView } = useInView(0.2);
-  const mapsUrl = 'https://www.google.com/maps/search/Thelungupalayam+Vaithiyasalai+Coimbatore';
+  const mapsUrl = 'https://maps.app.goo.gl/tzxUrx5eHC3LHnWc7';
 
   const a = (delay = '0s') => ({
     opacity: inView ? 1 : 0,

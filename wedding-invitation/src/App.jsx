@@ -20,7 +20,6 @@ export default function App() {
       <ScrollProgress />
       <FloatingPetals />
       <MusicButton />
-      <FloatingRSVP />
 
       {/* Sections */}
       <main>

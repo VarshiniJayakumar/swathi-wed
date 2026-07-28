@@ -78,8 +78,9 @@ export default function HeroSection() {
         }}>
           <h1 className="gold-shimmer" style={{
             fontFamily: '"Great Vibes", cursive',
-            fontSize: 'clamp(3.5rem, 11vw, 7rem)',
+            fontSize: 'clamp(2.4rem, 8vw, 7rem)',
             lineHeight: 1.1,
+            whiteSpace: 'nowrap',
           }}>
             S. Nandhakumar
           </h1>
@@ -105,8 +106,9 @@ export default function HeroSection() {
         }}>
           <h1 className="gold-shimmer" style={{
             fontFamily: '"Great Vibes", cursive',
-            fontSize: 'clamp(3.5rem, 11vw, 7rem)',
+            fontSize: 'clamp(2.4rem, 8vw, 7rem)',
             lineHeight: 1.1,
+            whiteSpace: 'nowrap',
           }}>
             K. Swathilakshmi
           </h1>

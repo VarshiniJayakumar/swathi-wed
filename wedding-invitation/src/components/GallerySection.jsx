@@ -3,7 +3,7 @@ import useInView from '../hooks/useInView';
 
 const photos = [
   { id:1, src:'/together2.png',   label:'Together',   },
-  { id:2, src:'/engagement1.png', label:'Engagement', },
+  { id:2, src:'/engagement2.png', label:'Engagement', },
 ];
 
 export default function GallerySection() {

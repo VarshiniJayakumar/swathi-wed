@@ -50,12 +50,7 @@ export default function FloatingRSVP() {
         {open ? '✕' : '💌'}
       </button>
 
-      {!open && (
-        <p style={{fontFamily:'Poppins',fontSize:'0.58rem',letterSpacing:'0.12em',
-          textTransform:'uppercase',color:'#B8860B',textAlign:'center'}}>
-          Join Us
-        </p>
-      )}
+      {!open && null}
     </div>
   );
 }

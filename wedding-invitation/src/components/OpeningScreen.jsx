@@ -103,50 +103,73 @@ export default function OpeningScreen({ onOpen }) {
           }}>✦ &nbsp; Together in Love &nbsp; ✦</span>
         </div>
 
-        {/* Two interlinked wedding rings SVG */}
+        {/* Traditional Kalash SVG */}
         <div style={{ ...a('0.25s'), marginBottom:'1rem' }}>
-          <svg viewBox="0 0 160 80" width="160" height="80" style={{
+          <svg viewBox="0 0 120 140" width="90" height="105" style={{
             display:'block', margin:'0 auto',
-            filter:'drop-shadow(0 0 18px rgba(212,175,55,0.55))',
+            filter:'drop-shadow(0 0 20px rgba(212,175,55,0.6))',
             animation:'float 5s ease-in-out infinite',
           }}>
             <defs>
-              <linearGradient id="ring1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <linearGradient id="kg1" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%"   stopColor="#B8860B"/>
-                <stop offset="40%"  stopColor="#FFD700"/>
-                <stop offset="70%"  stopColor="#FFF8DC"/>
+                <stop offset="45%"  stopColor="#FFD700"/>
+                <stop offset="65%"  stopColor="#FFF8DC"/>
                 <stop offset="100%" stopColor="#B8860B"/>
               </linearGradient>
-              <linearGradient id="ring2" x1="100%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%"   stopColor="#B8860B"/>
-                <stop offset="40%"  stopColor="#FFD700"/>
-                <stop offset="70%"  stopColor="#FFF8DC"/>
+              <linearGradient id="kg2" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%"   stopColor="#FFD700"/>
                 <stop offset="100%" stopColor="#B8860B"/>
               </linearGradient>
             </defs>
 
-            {/* Left ring — back half (behind right ring) */}
-            <path
-              d="M 55 40 A 28 28 0 0 1 55 40"
-              fill="none"
-            />
-            <circle cx="55" cy="40" r="28" fill="none" stroke="url(#ring1)" strokeWidth="6" opacity="0.9"/>
+            {/* Base plate */}
+            <ellipse cx="60" cy="128" rx="30" ry="5" fill="url(#kg2)" opacity="0.8"/>
 
-            {/* Right ring — back half (clip over left ring crossing) */}
-            <circle cx="105" cy="40" r="28" fill="none" stroke="url(#ring2)" strokeWidth="6" opacity="0.9"/>
+            {/* Pot body */}
+            <path d="M 30 100 Q 20 70 28 50 Q 36 30 60 28 Q 84 30 92 50 Q 100 70 90 100 Z"
+              fill="url(#kg1)" opacity="0.9"/>
 
-            {/* Left ring front arc — draws over right ring on left side of crossing */}
-            <path
-              d="M 55 12 A 28 28 0 0 1 83 40 A 28 28 0 0 1 55 68"
-              fill="none" stroke="url(#ring1)" strokeWidth="6" strokeLinecap="round"
-            />
+            {/* Pot neck */}
+            <rect x="44" y="22" width="32" height="10" rx="4" fill="url(#kg1)"/>
 
-            {/* Small diamonds on rings */}
-            <rect x="52" y="9" width="6" height="6" fill="#FFD700" opacity="0.9" transform="rotate(45,55,12)"/>
-            <rect x="102" y="9" width="6" height="6" fill="#FFD700" opacity="0.9" transform="rotate(45,105,12)"/>
+            {/* Pot rim */}
+            <ellipse cx="60" cy="22" rx="20" ry="5" fill="url(#kg2)" opacity="0.95"/>
 
-            {/* Heart between rings */}
-            <text x="80" y="47" textAnchor="middle" fontSize="14" fill="#D4AF37" opacity="0.85" fontFamily="serif">♥</text>
+            {/* Pot base curve */}
+            <ellipse cx="60" cy="100" rx="30" ry="8" fill="url(#kg2)" opacity="0.7"/>
+
+            {/* Decorative band on pot */}
+            <path d="M 32 72 Q 60 78 88 72" fill="none" stroke="#FFF8DC" strokeWidth="1.5" opacity="0.6"/>
+            <path d="M 30 82 Q 60 88 90 82" fill="none" stroke="#FFF8DC" strokeWidth="1" opacity="0.4"/>
+
+            {/* Small dot pattern on pot */}
+            {[40,52,60,68,80].map((x,i) => (
+              <circle key={i} cx={x} cy={62} r="2" fill="#FFF8DC" opacity="0.5"/>
+            ))}
+
+            {/* Coconut on top */}
+            <ellipse cx="60" cy="14" rx="12" ry="10" fill="url(#kg1)" opacity="0.95"/>
+            <ellipse cx="60" cy="12" rx="6" ry="5" fill="#B8860B" opacity="0.6"/>
+
+            {/* Left mango leaf */}
+            <path d="M 48 20 Q 28 8 26 -2 Q 36 4 44 16 Z" fill="url(#kg2)" opacity="0.85"/>
+            <line x1="35" y1="9" x2="44" y2="16" stroke="#FFF8DC" strokeWidth="0.6" opacity="0.5"/>
+
+            {/* Right mango leaf */}
+            <path d="M 72 20 Q 92 8 94 -2 Q 84 4 76 16 Z" fill="url(#kg2)" opacity="0.85"/>
+            <line x1="85" y1="9" x2="76" y2="16" stroke="#FFF8DC" strokeWidth="0.6" opacity="0.5"/>
+
+            {/* Center leaf */}
+            <path d="M 54 18 Q 60 2 66 18 Z" fill="url(#kg2)" opacity="0.9"/>
+
+            {/* Base stand */}
+            <rect x="42" y="100" width="36" height="6" rx="2" fill="url(#kg1)" opacity="0.8"/>
+            <rect x="36" y="106" width="48" height="6" rx="2" fill="url(#kg1)" opacity="0.9"/>
+            <rect x="30" y="112" width="60" height="6" rx="3" fill="url(#kg2)" opacity="0.85"/>
+
+            {/* OM symbol on pot */}
+            <text x="60" y="68" textAnchor="middle" fontSize="18" fill="#FFF8DC" opacity="0.7" fontFamily="serif">ॐ</text>
           </svg>
         </div>
 

@@ -2,12 +2,8 @@ import React, { useRef } from 'react';
 import useInView from '../hooks/useInView';
 
 const photos = [
-  { id:1, src:'/together1.png',   label:'Together',     emoji:'💑', bg:'linear-gradient(135deg,#F5EDD8,#EDD9B0)' },
-  { id:2, src:'/together2.png',   label:'Together',     emoji:'💑', bg:'linear-gradient(135deg,#EDD9B0,#D4AF37)' },
-  { id:3, src:'/together3.png',   label:'Together',     emoji:'🌸', bg:'linear-gradient(135deg,#FAF6EF,#F5EDD8)' },
-  { id:4, src:'/engagement1.png', label:'Engagement',   emoji:'💍', bg:'linear-gradient(135deg,#F5EDD8,#EDD9B0)' },
-  { id:5, src:'/withfamily1.png', label:'With Family',  emoji:'👨‍👩‍👦', bg:'linear-gradient(135deg,#EDD9B0,#F5EDD8)' },
-  { id:6, src:'/withfamily2.png', label:'With Family',  emoji:'👨‍👩‍👦', bg:'linear-gradient(135deg,#F5EDD8,#EDD9B0)' },
+  { id:1, src:'/together2.png',   label:'Together',   emoji:'💑', bg:'linear-gradient(135deg,#F5EDD8,#EDD9B0)' },
+  { id:2, src:'/engagement1.png', label:'Engagement', emoji:'💍', bg:'linear-gradient(135deg,#EDD9B0,#D4AF37)' },
 ];
 
 export default function GallerySection() {

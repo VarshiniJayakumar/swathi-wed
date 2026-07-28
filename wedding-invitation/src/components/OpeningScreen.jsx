@@ -100,23 +100,25 @@ export default function OpeningScreen({ onOpen }) {
           <span style={{
             fontFamily:'Poppins', fontSize:'0.62rem',
             letterSpacing:'0.45em', textTransform:'uppercase', color:'#B8860B',
-          }}>Together in Love</span>
+          }}>✦ &nbsp; Together in Love &nbsp; ✦</span>
         </div>
 
-        {/* Big monogram N & S */}
-        <div style={{ ...a('0.25s'), marginBottom:'0.5rem' }}>
-          <p style={{
-            fontFamily:'"Great Vibes",cursive',
-            fontSize:'clamp(4rem,15vw,9rem)',
-            lineHeight:1,
-            background:'linear-gradient(160deg,#B8860B 0%,#FFD700 35%,#FFF8DC 55%,#FFD700 75%,#B8860B 100%)',
-            backgroundSize:'200% auto',
-            WebkitBackgroundClip:'text',
-            WebkitTextFillColor:'transparent',
-            backgroundClip:'text',
-            animation:'shimmer 4s linear infinite',
-            filter:'drop-shadow(0 4px 24px rgba(212,175,55,0.3))',
-          }}>N &amp; S</p>
+        {/* Decorative icon */}
+        <div style={{ ...a('0.25s'), marginBottom:'0.8rem' }}>
+          <span style={{
+            fontSize:'clamp(2.5rem,6vw,3.5rem)',
+            display:'block',
+            filter:'drop-shadow(0 0 18px rgba(212,175,55,0.6))',
+            animation:'float 4s ease-in-out infinite',
+          }}>🕯️</span>
+        </div>
+
+        {/* Wedding of label */}
+        <div style={{ ...a('0.35s'), marginBottom:'0.5rem' }}>
+          <span style={{
+            fontFamily:'Poppins', fontSize:'0.62rem',
+            letterSpacing:'0.45em', textTransform:'uppercase', color:'#B8860B',
+          }}>— Wedding Invitation —</span>
         </div>
 
         {/* Gold rule with diamond */}

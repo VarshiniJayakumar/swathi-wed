@@ -103,8 +103,105 @@ export default function OpeningScreen({ onOpen }) {
           }}>✦ &nbsp; Together in Love &nbsp; ✦</span>
         </div>
 
+        {/* Vinayagar (Ganesha) SVG */}
+        <div style={{ ...a('0.25s'), marginBottom:'1rem' }}>
+          <svg viewBox="0 0 120 150" width="100" height="125" style={{
+            display:'block', margin:'0 auto',
+            filter:'drop-shadow(0 0 20px rgba(212,175,55,0.6))',
+            animation:'float 5s ease-in-out infinite',
+          }}>
+            <defs>
+              <linearGradient id="gGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%"   stopColor="#B8860B"/>
+                <stop offset="40%"  stopColor="#FFD700"/>
+                <stop offset="65%"  stopColor="#FFF8DC"/>
+                <stop offset="100%" stopColor="#B8860B"/>
+              </linearGradient>
+              <linearGradient id="gGold2" x1="100%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%"   stopColor="#FFD700"/>
+                <stop offset="100%" stopColor="#B8860B"/>
+              </linearGradient>
+            </defs>
+
+            {/* ── Crown / Mukut ── */}
+            <path d="M 42 28 L 38 14 L 46 20 L 60 10 L 74 20 L 82 14 L 78 28 Z"
+              fill="url(#gGold)" opacity="0.95"/>
+            <circle cx="60" cy="10" r="4" fill="#FFD700" opacity="0.95"/>
+            <circle cx="46" cy="20" r="2.5" fill="#FFD700" opacity="0.8"/>
+            <circle cx="74" cy="20" r="2.5" fill="#FFD700" opacity="0.8"/>
+
+            {/* ── Big Left Ear ── */}
+            <ellipse cx="26" cy="52" rx="18" ry="22" fill="url(#gGold)" opacity="0.88"/>
+            <ellipse cx="26" cy="52" rx="11" ry="15" fill="url(#gGold2)" opacity="0.5"/>
+
+            {/* ── Big Right Ear ── */}
+            <ellipse cx="94" cy="52" rx="18" ry="22" fill="url(#gGold)" opacity="0.88"/>
+            <ellipse cx="94" cy="52" rx="11" ry="15" fill="url(#gGold2)" opacity="0.5"/>
+
+            {/* ── Head ── */}
+            <ellipse cx="60" cy="48" rx="28" ry="26" fill="url(#gGold)" opacity="0.95"/>
+
+            {/* ── Eyes ── */}
+            <ellipse cx="50" cy="42" rx="5" ry="5.5" fill="#1C1008" opacity="0.85"/>
+            <ellipse cx="70" cy="42" rx="5" ry="5.5" fill="#1C1008" opacity="0.85"/>
+            <circle cx="51" cy="41" r="1.5" fill="#FFF8DC" opacity="0.9"/>
+            <circle cx="71" cy="41" r="1.5" fill="#FFF8DC" opacity="0.9"/>
+
+            {/* ── Third eye / tilak ── */}
+            <ellipse cx="60" cy="36" rx="3" ry="4" fill="#B8860B" opacity="0.8"/>
+            <circle cx="60" cy="34" r="1.5" fill="#FFD700" opacity="0.9"/>
+
+            {/* ── Trunk curling left ── */}
+            <path d="M 52 58 Q 38 68 36 82 Q 38 90 50 86 Q 56 84 54 76"
+              fill="none" stroke="url(#gGold)" strokeWidth="7" strokeLinecap="round"/>
+            {/* Trunk tip curl */}
+            <circle cx="54" cy="76" r="5" fill="url(#gGold)" opacity="0.9"/>
+
+            {/* ── Tusk ── */}
+            <path d="M 70 60 Q 82 66 84 76 Q 82 80 78 78"
+              fill="none" stroke="#FFF8DC" strokeWidth="3" strokeLinecap="round" opacity="0.85"/>
+
+            {/* ── Neck ── */}
+            <rect x="50" y="72" width="20" height="8" rx="4" fill="url(#gGold)" opacity="0.88"/>
+
+            {/* ── Body ── */}
+            <ellipse cx="60" cy="110" rx="32" ry="30" fill="url(#gGold)" opacity="0.88"/>
+
+            {/* ── Navel / belly button ── */}
+            <circle cx="60" cy="108" r="5" fill="url(#gGold2)" opacity="0.6"/>
+            <circle cx="60" cy="108" r="2" fill="#FFD700" opacity="0.8"/>
+
+            {/* ── Left arm up (blessing) ── */}
+            <path d="M 30 90 Q 16 76 18 62 Q 22 56 30 60"
+              fill="none" stroke="url(#gGold)" strokeWidth="9" strokeLinecap="round" opacity="0.88"/>
+            {/* Left hand open */}
+            <circle cx="18" cy="62" r="7" fill="url(#gGold)" opacity="0.88"/>
+
+            {/* ── Right arm holding modak ── */}
+            <path d="M 90 90 Q 106 78 104 64 Q 100 58 92 62"
+              fill="none" stroke="url(#gGold)" strokeWidth="9" strokeLinecap="round" opacity="0.88"/>
+            {/* Modak (sweet) */}
+            <ellipse cx="104" cy="60" rx="9" ry="11" fill="url(#gGold)" opacity="0.9"/>
+            <path d="M 96 54 Q 104 48 112 54" fill="none" stroke="#FFF8DC" strokeWidth="1" opacity="0.6"/>
+
+            {/* ── Legs ── */}
+            <ellipse cx="44" cy="138" rx="14" ry="10" fill="url(#gGold)" opacity="0.82"/>
+            <ellipse cx="76" cy="138" rx="14" ry="10" fill="url(#gGold)" opacity="0.82"/>
+
+            {/* ── Decorative necklace ── */}
+            <path d="M 38 82 Q 60 90 82 82" fill="none" stroke="#FFD700" strokeWidth="1.5" opacity="0.7"/>
+            {[44,52,60,68,76].map((x,i)=>(
+              <circle key={i} cx={x} cy={83+(i===2?2:0)} r="2" fill="#FFD700" opacity="0.7"/>
+            ))}
+
+            {/* ── Om symbol on belly ── */}
+            <text x="60" y="122" textAnchor="middle" fontSize="13"
+              fill="#FFF8DC" opacity="0.55" fontFamily="serif">ॐ</text>
+          </svg>
+        </div>
+
         {/* Wedding of label */}
-        <div style={{ ...a('0.25s'), marginBottom:'0.5rem' }}>
+        <div style={{ ...a('0.35s'), marginBottom:'0.5rem' }}>
           <span style={{
             fontFamily:'Poppins', fontSize:'0.62rem',
             letterSpacing:'0.45em', textTransform:'uppercase', color:'#B8860B',

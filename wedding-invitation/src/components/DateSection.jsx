@@ -109,7 +109,7 @@ export default function DateSection() {
           </div>
         </div>
 
-        {/* Muhurtham note */}
+        {/* Reception note */}
         <div style={{marginTop:'1.5rem',...a('0.8s')}}>
           <div style={{
             display:'inline-block',padding:'10px 24px',borderRadius:50,

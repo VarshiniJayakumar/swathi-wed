@@ -78,7 +78,7 @@ export default function VenueSection() {
           <div style={{ display:'flex', justifyContent:'center', gap:'1rem', marginBottom:'2rem', flexWrap:'wrap' }}>
             {[
               { icon:'📅', label:'30 August 2026', sub:'Sunday' },
-              { icon:'🕐', label:'11:00 AM – 3:00 PM', sub:'Muhurtham' },
+              { icon:'🕐', label:'11:00 AM – 3:00 PM', sub:'Reception' },
             ].map(({ icon, label, sub }) => (
               <div key={label} style={{
                 padding:'10px 18px', borderRadius:12,

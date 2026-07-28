@@ -103,73 +103,90 @@ export default function OpeningScreen({ onOpen }) {
           }}>✦ &nbsp; Together in Love &nbsp; ✦</span>
         </div>
 
-        {/* Traditional Kalash SVG */}
+        {/* Krishna Radha silhouette SVG */}
         <div style={{ ...a('0.25s'), marginBottom:'1rem' }}>
-          <svg viewBox="0 0 120 140" width="90" height="105" style={{
+          <svg viewBox="0 0 160 180" width="130" height="145" style={{
             display:'block', margin:'0 auto',
-            filter:'drop-shadow(0 0 20px rgba(212,175,55,0.6))',
+            filter:'drop-shadow(0 0 22px rgba(212,175,55,0.55))',
             animation:'float 5s ease-in-out infinite',
           }}>
             <defs>
-              <linearGradient id="kg1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <linearGradient id="silGold" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%"   stopColor="#B8860B"/>
-                <stop offset="45%"  stopColor="#FFD700"/>
+                <stop offset="40%"  stopColor="#FFD700"/>
                 <stop offset="65%"  stopColor="#FFF8DC"/>
                 <stop offset="100%" stopColor="#B8860B"/>
               </linearGradient>
-              <linearGradient id="kg2" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%"   stopColor="#FFD700"/>
+              <linearGradient id="silGold2" x1="100%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%"   stopColor="#B8860B"/>
+                <stop offset="50%"  stopColor="#FFD700"/>
                 <stop offset="100%" stopColor="#B8860B"/>
               </linearGradient>
             </defs>
 
-            {/* Base plate */}
-            <ellipse cx="60" cy="128" rx="30" ry="5" fill="url(#kg2)" opacity="0.8"/>
+            {/* ── RADHA (left figure) ── */}
+            {/* Radha head */}
+            <ellipse cx="52" cy="28" rx="13" ry="14" fill="url(#silGold)" opacity="0.92"/>
+            {/* Radha hair bun */}
+            <ellipse cx="52" cy="16" rx="7" ry="5" fill="url(#silGold)" opacity="0.9"/>
+            {/* Radha bun decoration */}
+            <circle cx="52" cy="12" r="3" fill="#FFD700" opacity="0.85"/>
+            {/* Radha neck */}
+            <rect x="48" y="41" width="8" height="7" rx="3" fill="url(#silGold)" opacity="0.88"/>
+            {/* Radha body/saree */}
+            <path d="M 36 48 Q 32 70 30 95 Q 34 110 52 112 Q 70 110 72 95 Q 72 70 66 48 Z"
+              fill="url(#silGold)" opacity="0.88"/>
+            {/* Radha saree drape */}
+            <path d="M 32 70 Q 20 75 18 88 Q 22 95 30 90" fill="url(#silGold)" opacity="0.7"/>
+            {/* Radha left arm raised holding flute end */}
+            <path d="M 38 55 Q 28 45 24 38" fill="none" stroke="url(#silGold)" strokeWidth="5" strokeLinecap="round" opacity="0.88"/>
+            {/* Radha right arm toward Krishna */}
+            <path d="M 64 58 Q 76 60 84 58" fill="none" stroke="url(#silGold)" strokeWidth="5" strokeLinecap="round" opacity="0.88"/>
+            {/* Radha legs */}
+            <ellipse cx="46" cy="128" rx="7" ry="18" fill="url(#silGold)" opacity="0.82"/>
+            <ellipse cx="58" cy="130" rx="7" ry="16" fill="url(#silGold)" opacity="0.82"/>
 
-            {/* Pot body */}
-            <path d="M 30 100 Q 20 70 28 50 Q 36 30 60 28 Q 84 30 92 50 Q 100 70 90 100 Z"
-              fill="url(#kg1)" opacity="0.9"/>
+            {/* ── KRISHNA (right figure) ── */}
+            {/* Krishna head */}
+            <ellipse cx="108" cy="24" rx="13" ry="14" fill="url(#silGold2)" opacity="0.92"/>
+            {/* Krishna crown / mukut */}
+            <path d="M 96 18 Q 100 8 108 6 Q 116 8 120 18" fill="url(#silGold2)" opacity="0.9"/>
+            <path d="M 100 12 Q 108 4 116 12" fill="url(#silGold2)" opacity="0.85"/>
+            <circle cx="108" cy="5" r="3.5" fill="#FFD700" opacity="0.9"/>
+            {/* Peacock feather on crown */}
+            <path d="M 108 5 Q 112 -4 114 -10" fill="none" stroke="#FFD700" strokeWidth="1.5" opacity="0.8"/>
+            <ellipse cx="114" cy="-11" rx="4" ry="6" fill="none" stroke="#FFD700" strokeWidth="1" opacity="0.7"/>
+            <circle cx="114" cy="-11" r="2" fill="#FFD700" opacity="0.8"/>
+            {/* Krishna neck */}
+            <rect x="104" y="37" width="8" height="7" rx="3" fill="url(#silGold2)" opacity="0.88"/>
+            {/* Krishna body */}
+            <path d="M 90 44 Q 86 66 88 92 Q 92 108 108 110 Q 124 108 128 92 Q 130 66 126 44 Z"
+              fill="url(#silGold2)" opacity="0.88"/>
+            {/* Krishna dhoti drape */}
+            <path d="M 128 68 Q 140 72 142 85 Q 138 92 130 88" fill="url(#silGold2)" opacity="0.7"/>
+            {/* Krishna right arm raised playing flute */}
+            <path d="M 122 52 Q 134 44 140 38" fill="none" stroke="url(#silGold2)" strokeWidth="5" strokeLinecap="round" opacity="0.88"/>
+            {/* Krishna left arm toward Radha */}
+            <path d="M 92 56 Q 80 58 74 56" fill="none" stroke="url(#silGold2)" strokeWidth="5" strokeLinecap="round" opacity="0.88"/>
+            {/* Flute */}
+            <path d="M 24 38 Q 80 50 140 38" fill="none" stroke="#FFD700" strokeWidth="2" strokeLinecap="round" opacity="0.7"/>
+            {/* Krishna legs — tribhanga pose (slight bend) */}
+            <path d="M 98 110 Q 96 128 100 148" fill="none" stroke="url(#silGold2)" strokeWidth="10" strokeLinecap="round" opacity="0.82"/>
+            <path d="M 118 110 Q 122 126 118 148" fill="none" stroke="url(#silGold2)" strokeWidth="10" strokeLinecap="round" opacity="0.82"/>
 
-            {/* Pot neck */}
-            <rect x="44" y="22" width="32" height="10" rx="4" fill="url(#kg1)"/>
+            {/* ── Joining hands in center ── */}
+            <circle cx="80" cy="58" r="6" fill="#FFD700" opacity="0.85"/>
 
-            {/* Pot rim */}
-            <ellipse cx="60" cy="22" rx="20" ry="5" fill="url(#kg2)" opacity="0.95"/>
+            {/* ── Heart above ── */}
+            <path d="M 80 -8 C 75 -14 68 -12 68 -6 C 68 0 80 8 80 8 C 80 8 92 0 92 -6 C 92 -12 85 -14 80 -8 Z"
+              fill="#FFD700" opacity="0.7"/>
 
-            {/* Pot base curve */}
-            <ellipse cx="60" cy="100" rx="30" ry="8" fill="url(#kg2)" opacity="0.7"/>
-
-            {/* Decorative band on pot */}
-            <path d="M 32 72 Q 60 78 88 72" fill="none" stroke="#FFF8DC" strokeWidth="1.5" opacity="0.6"/>
-            <path d="M 30 82 Q 60 88 90 82" fill="none" stroke="#FFF8DC" strokeWidth="1" opacity="0.4"/>
-
-            {/* Small dot pattern on pot */}
-            {[40,52,60,68,80].map((x,i) => (
-              <circle key={i} cx={x} cy={62} r="2" fill="#FFF8DC" opacity="0.5"/>
+            {/* Ground line */}
+            <line x1="20" y1="150" x2="140" y2="150" stroke="url(#silGold)" strokeWidth="1" opacity="0.4"/>
+            {/* Decorative dots on ground */}
+            {[30,50,70,80,90,110,130].map((x,i)=>(
+              <circle key={i} cx={x} cy="154" r="1.5" fill="#D4AF37" opacity="0.4"/>
             ))}
-
-            {/* Coconut on top */}
-            <ellipse cx="60" cy="14" rx="12" ry="10" fill="url(#kg1)" opacity="0.95"/>
-            <ellipse cx="60" cy="12" rx="6" ry="5" fill="#B8860B" opacity="0.6"/>
-
-            {/* Left mango leaf */}
-            <path d="M 48 20 Q 28 8 26 -2 Q 36 4 44 16 Z" fill="url(#kg2)" opacity="0.85"/>
-            <line x1="35" y1="9" x2="44" y2="16" stroke="#FFF8DC" strokeWidth="0.6" opacity="0.5"/>
-
-            {/* Right mango leaf */}
-            <path d="M 72 20 Q 92 8 94 -2 Q 84 4 76 16 Z" fill="url(#kg2)" opacity="0.85"/>
-            <line x1="85" y1="9" x2="76" y2="16" stroke="#FFF8DC" strokeWidth="0.6" opacity="0.5"/>
-
-            {/* Center leaf */}
-            <path d="M 54 18 Q 60 2 66 18 Z" fill="url(#kg2)" opacity="0.9"/>
-
-            {/* Base stand */}
-            <rect x="42" y="100" width="36" height="6" rx="2" fill="url(#kg1)" opacity="0.8"/>
-            <rect x="36" y="106" width="48" height="6" rx="2" fill="url(#kg1)" opacity="0.9"/>
-            <rect x="30" y="112" width="60" height="6" rx="3" fill="url(#kg2)" opacity="0.85"/>
-
-            {/* OM symbol on pot */}
-            <text x="60" y="68" textAnchor="middle" fontSize="18" fill="#FFF8DC" opacity="0.7" fontFamily="serif">ॐ</text>
           </svg>
         </div>
 

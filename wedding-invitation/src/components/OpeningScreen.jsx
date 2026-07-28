@@ -103,14 +103,50 @@ export default function OpeningScreen({ onOpen }) {
           }}>✦ &nbsp; Together in Love &nbsp; ✦</span>
         </div>
 
-        {/* Decorative icon */}
-        <div style={{ ...a('0.25s'), marginBottom:'0.8rem' }}>
-          <span style={{
-            fontSize:'clamp(2.5rem,6vw,3.5rem)',
-            display:'block',
-            filter:'drop-shadow(0 0 18px rgba(212,175,55,0.6))',
-            animation:'float 4s ease-in-out infinite',
-          }}>🕯️</span>
+        {/* Decorative SVG mandala ring */}
+        <div style={{ ...a('0.25s'), marginBottom:'1rem' }}>
+          <svg viewBox="0 0 120 120" width="110" height="110" style={{
+            display:'block', margin:'0 auto',
+            filter:'drop-shadow(0 0 16px rgba(212,175,55,0.5))',
+            animation:'float 5s ease-in-out infinite',
+          }}>
+            <defs>
+              <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%"   stopColor="#B8860B"/>
+                <stop offset="40%"  stopColor="#FFD700"/>
+                <stop offset="60%"  stopColor="#FFF8DC"/>
+                <stop offset="100%" stopColor="#B8860B"/>
+              </linearGradient>
+            </defs>
+            {/* Outer circle */}
+            <circle cx="60" cy="60" r="55" fill="none" stroke="url(#goldGrad)" strokeWidth="0.8" opacity="0.6"/>
+            {/* Inner circle */}
+            <circle cx="60" cy="60" r="42" fill="none" stroke="url(#goldGrad)" strokeWidth="0.6" opacity="0.4"/>
+            {/* 8 petal lines */}
+            {Array.from({length:8},(_,i)=>{
+              const angle = (i*45)*Math.PI/180;
+              const x1=60+32*Math.cos(angle), y1=60+32*Math.sin(angle);
+              const x2=60+52*Math.cos(angle), y2=60+52*Math.sin(angle);
+              return <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke="url(#goldGrad)" strokeWidth="0.8" opacity="0.7"/>;
+            })}
+            {/* 8 small diamonds on outer ring */}
+            {Array.from({length:8},(_,i)=>{
+              const angle = (i*45+22.5)*Math.PI/180;
+              const cx=60+54*Math.cos(angle), cy=60+54*Math.sin(angle);
+              return <rect key={i} x={cx-2.5} y={cy-2.5} width="5" height="5" fill="#D4AF37" opacity="0.8" transform={`rotate(45,${cx},${cy})`}/>;
+            })}
+            {/* 4 lotus petals */}
+            {Array.from({length:4},(_,i)=>{
+              const angle = (i*90)*Math.PI/180;
+              const px=60+20*Math.cos(angle), py=60+20*Math.sin(angle);
+              return <ellipse key={i} cx={px} cy={py} rx="9" ry="4"
+                fill="none" stroke="url(#goldGrad)" strokeWidth="0.8" opacity="0.6"
+                transform={`rotate(${i*90+90},${px},${py})`}/>;
+            })}
+            {/* Center dot */}
+            <circle cx="60" cy="60" r="4" fill="#D4AF37" opacity="0.9"/>
+            <circle cx="60" cy="60" r="8" fill="none" stroke="#D4AF37" strokeWidth="0.6" opacity="0.5"/>
+          </svg>
         </div>
 
         {/* Wedding of label */}

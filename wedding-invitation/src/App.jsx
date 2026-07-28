@@ -2,7 +2,6 @@ import React, { useState, useRef } from 'react';
 import OpeningScreen from './components/OpeningScreen';
 import ScrollProgress from './components/ScrollProgress';
 import FloatingPetals from './components/FloatingPetals';
-import MusicButton from './components/MusicButton';
 import HeroSection from './components/HeroSection';
 import CoupleSection from './components/CoupleSection';
 import DateSection from './components/DateSection';
@@ -19,7 +18,6 @@ export default function App() {
 
   const handleOpen = () => {
     setOpened(true);
-    // auto-play music when invitation opens
     if (audioRef.current) {
       audioRef.current.play().catch(() => {});
     }
@@ -27,13 +25,10 @@ export default function App() {
 
   return (
     <>
-      {/* Background music (shared with MusicButton) */}
-      <audio ref={audioRef} src="/music.mp3" loop preload="auto" id="bg-audio" />
+      <audio ref={audioRef} src="/music.mp3" loop preload="auto" />
 
-      {/* Opening cover screen */}
       {!opened && <OpeningScreen onOpen={handleOpen} />}
 
-      {/* Main invitation — hidden until opened */}
       <div style={{
         opacity: opened ? 1 : 0,
         transition: 'opacity 0.8s ease 0.3s',
@@ -41,7 +36,6 @@ export default function App() {
       }}>
         <ScrollProgress />
         <FloatingPetals />
-        <MusicButton audioRef={audioRef} />
 
         <main>
           <HeroSection />

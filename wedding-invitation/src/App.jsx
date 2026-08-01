@@ -8,7 +8,6 @@ import DateSection from './components/DateSection';
 import VenueSection from './components/VenueSection';
 import CountdownSection from './components/CountdownSection';
 import JourneySection from './components/JourneySection';
-import GallerySection from './components/GallerySection';
 import EventDetailsSection from './components/EventDetailsSection';
 import ThankYouSection from './components/ThankYouSection';
 
@@ -44,7 +43,6 @@ export default function App() {
           <VenueSection />
           <CountdownSection />
           <JourneySection />
-          <GallerySection />
           <EventDetailsSection />
           <ThankYouSection />
         </main>

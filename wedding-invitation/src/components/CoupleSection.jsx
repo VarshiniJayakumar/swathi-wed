@@ -38,19 +38,17 @@ export default function CoupleSection() {
 
           {/* Groom */}
           <div style={{ textAlign: 'center', ...animate('0.15s', 'left') }}>
-            {/* Avatar ring */}
+            {/* Groom photo */}
             <div style={{
               width: 140, height: 140,
               borderRadius: '50%',
-              background: 'linear-gradient(135deg, #FAF6EF, #F5EDD8)',
               border: '2px solid #D4AF37',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              overflow: 'hidden',
               margin: '0 auto 1.25rem',
-              fontSize: '3.5rem',
-              boxShadow: '0 0 0 6px rgba(212,175,55,0.1), 0 12px 40px rgba(184,134,11,0.15)',
+              boxShadow: '0 0 0 6px rgba(212,175,55,0.1), 0 12px 40px rgba(184,134,11,0.2)',
               animation: 'pulseGold 3s ease-in-out infinite',
             }}>
-              🤵
+              <img src="/groom.png" alt="Groom" style={{ width:'100%', height:'100%', objectFit:'cover', display:'block' }}/>
             </div>
             <h2 className="gold-shimmer" style={{
               fontFamily: '"Great Vibes", cursive',
@@ -72,18 +70,17 @@ export default function CoupleSection() {
 
           {/* Bride */}
           <div style={{ textAlign: 'center', ...animate('0.15s', 'right') }}>
+            {/* Bride photo */}
             <div style={{
               width: 140, height: 140,
               borderRadius: '50%',
-              background: 'linear-gradient(135deg, #FAF6EF, #F5EDD8)',
               border: '2px solid #D4AF37',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              overflow: 'hidden',
               margin: '0 auto 1.25rem',
-              fontSize: '3.5rem',
-              boxShadow: '0 0 0 6px rgba(212,175,55,0.1), 0 12px 40px rgba(184,134,11,0.15)',
+              boxShadow: '0 0 0 6px rgba(212,175,55,0.1), 0 12px 40px rgba(184,134,11,0.2)',
               animation: 'pulseGold 3s ease-in-out infinite 0.5s',
             }}>
-              👰
+              <img src="/bride.png" alt="Bride" style={{ width:'100%', height:'100%', objectFit:'cover', display:'block' }}/>
             </div>
             <h2 className="gold-shimmer" style={{
               fontFamily: '"Great Vibes", cursive',

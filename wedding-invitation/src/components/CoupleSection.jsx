@@ -48,7 +48,7 @@ export default function CoupleSection() {
               boxShadow: '0 0 0 6px rgba(212,175,55,0.1), 0 12px 40px rgba(184,134,11,0.2)',
               animation: 'pulseGold 3s ease-in-out infinite',
             }}>
-              <img src="/groom.png" alt="Groom" style={{ width:'100%', height:'100%', objectFit:'cover', objectPosition:'center top', display:'block', transform:'scale(0.75)', transformOrigin:'center top' }}/>
+              <img src="/groom.png" alt="Groom" style={{ width:'100%', height:'100%', objectFit:'cover', objectPosition:'center center', display:'block' }}/>
             </div>
             <h2 className="gold-shimmer" style={{
               fontFamily: '"Great Vibes", cursive',
